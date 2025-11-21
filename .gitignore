@@ -1,0 +1,6 @@
+# project excluded folders
+.vscode/
+.idea/
+.gradle/
+build/
+run/

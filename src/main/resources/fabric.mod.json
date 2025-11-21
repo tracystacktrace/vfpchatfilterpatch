@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "vfpchatfilterpatch",
+  "version": "${version}",
+  "name": "VFP ChatFilter Patch",
+  "description": "A small set of patches for ViaFabricPlus and its related libraries, just to provide more comfortable experience.",
+  "authors": ["tracystacktrace"],
+  "contact": {},
+  "license": "Apache-2.0",
+  "icon": "assets/vfpchatfilterpatch/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "net.tracystacktrace.vfpchatfilterpatch.VFPChatFilterPatch"
+    ]
+  },
+  "mixins": [
+    {
+      "config": "vfpchatfilterpatch.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "minecraft": "${minecraft_version}",
+    "viafabricplus": "${viafabricplus_version}"
+  }
+}
