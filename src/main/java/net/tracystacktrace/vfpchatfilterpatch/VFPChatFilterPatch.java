@@ -31,6 +31,8 @@ public class VFPChatFilterPatch implements ClientModInitializer {
 
     @Override
     public void onInitializeClient() {
+        QuickConfig.init();
+
         LOGGER.info("Trying to find out candidate font.txt...");
         final Path fontPath = FabricLoader.getInstance().getConfigDir().resolve("vfpchatfilterpatch/font.txt");
         final File fontFile = fontPath.toFile();
@@ -42,10 +44,10 @@ public class VFPChatFilterPatch implements ClientModInitializer {
             this.writeToFile(fontPath, fallbackFontTxt);
         }
 
-        this.readFontFile(fontPath);
+        readFontFile(fontPath);
     }
 
-    private void readFontFile(final @NotNull Path file) {
+    public static void readFontFile(final @NotNull Path file) {
         try {
             final List<String> allLines = Files.readAllLines(file, StandardCharsets.UTF_8);
             allLines.add(" ");

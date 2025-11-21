@@ -1,0 +1,10 @@
+{
+  "vfpchatfilterpatch.screen.config": "Configure VFP ChatFilter Patch",
+  "vfpchatfilterpatch.screen.replacesequence": "Replace Sequence:",
+  "vfpchatfilterpatch.button.mode.txt": "Mode: Use font.txt from config",
+  "vfpchatfilterpatch.button.mode.all": "Mode: Allow any character",
+  "vfpchatfilterpatch.button.reload": "Reload font.txt from folder",
+  "vfpchatfilterpatch.button.exit": "Save and Exit",
+  "vfpchatfilterpatch.notify.txt.success": "Reloaded font.txt file!",
+  "vfpchatfilterpatch.notify.txt.fail": "Failed to reload font.txt, check logs!"
+}
