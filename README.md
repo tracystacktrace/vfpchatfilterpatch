@@ -1,4 +1,4 @@
-# VFPChatFilterPatch
+# VFP ChatFilter Patch
 
 **VFP (ViaFabricPlus) ChatFilter Patch** is a small modification that replaces the logic of chat filter code provided in ViaLegacy library (which ViaFabricPlus uses to connect to ancient mc version servers), allowing players to configure custom behavior of chat filter or even allow any characters to be sent.
 
