@@ -1,0 +1,10 @@
+{
+  "vfpchatfilterpatch.screen.config": "Настроить VFP ChatFilter Patch",
+  "vfpchatfilterpatch.screen.replacesequence": "Замена символов:",
+  "vfpchatfilterpatch.button.mode.txt": "Режим: Использовать только из font.txt",
+  "vfpchatfilterpatch.button.mode.all": "Режим: Разрешить любой символ",
+  "vfpchatfilterpatch.button.reload": "Форсировать загрузку font.txt",
+  "vfpchatfilterpatch.button.exit": "Сохранить и выйти",
+  "vfpchatfilterpatch.notify.txt.success": "Файл font.txt был успешно загружен!",
+  "vfpchatfilterpatch.notify.txt.fail": "Файл font.txt не был загружен, проверьте логи!"
+}
