@@ -3,9 +3,12 @@
   "id": "vfpchatfilterpatch",
   "version": "${version}",
   "name": "VFP ChatFilter Patch",
-  "description": "A small set of patches for ViaFabricPlus and its related libraries, just to provide more comfortable experience.",
+  "description": "A patch for the client-side chat filter of ViaLegacy library (ViaFabricPlus), allowing to manipulate and change its behaviour.",
   "authors": ["tracystacktrace"],
-  "contact": {},
+  "contact": {
+    "issues": "https://github.com/tracystacktrace/vfpchatfilterpatch/issues",
+    "sources": "https://github.com/tracystacktrace/vfpchatfilterpatch"
+  },
   "license": "Apache-2.0",
   "icon": "assets/vfpchatfilterpatch/icon.png",
   "environment": "client",
@@ -23,6 +26,6 @@
   "depends": {
     "fabricloader": ">=${loader_version}",
     "minecraft": "${minecraft_version}",
-    "viafabricplus": "${viafabricplus_version}"
+    "viafabricplus": ">=${viafabricplus_version}"
   }
 }
