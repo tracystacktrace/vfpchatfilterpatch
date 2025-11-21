@@ -62,7 +62,7 @@ public class GuiConfigScreen extends Screen {
     public void render(DrawContext context, int mouseX, int mouseY, float deltaTicks) {
         super.render(context, mouseX, mouseY, deltaTicks);
         context.drawCenteredTextWithShadow(this.textRenderer, Text.translatable("vfpchatfilterpatch.screen.config"), this.width / 2, this.height / 2 - 80, 0xFFFFFFFF);
-        context.drawTextWithShadow(this.textRenderer, Text.translatable("vfpchatfilterpatch.screen.replacesequence"), this.width / 2 - 100, this.height / 2 + 15 - this.textRenderer.fontHeight / 2, 0xFFFFFFFF);
+        context.drawTextWithShadow(this.textRenderer, Text.translatable("vfpchatfilterpatch.screen.replacesequence"), this.width / 2 - 100 + 2, this.height / 2 + 15 - this.textRenderer.fontHeight / 2, 0xFFFFFFFF);
     }
 
     private void performModeChange() {

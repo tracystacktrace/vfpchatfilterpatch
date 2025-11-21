@@ -23,7 +23,7 @@ public abstract class MixinMultiplayerScreen extends Screen {
 
     @Inject(method = "refreshWidgetPositions", at = @At("TAIL"))
     private void vfpchatfilterpatch$addConfigButton(CallbackInfo ci) {
-        if(vfpchatfilterpatch$cfConfigButton == null) {
+        if (vfpchatfilterpatch$cfConfigButton == null) {
             vfpchatfilterpatch$cfConfigButton = GuiConfigScreen.getConfigEntryButton(this.client, this);
             this.addDrawableChild(vfpchatfilterpatch$cfConfigButton);
         }
