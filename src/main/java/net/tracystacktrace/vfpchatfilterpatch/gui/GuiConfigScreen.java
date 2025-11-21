@@ -47,7 +47,8 @@ public class GuiConfigScreen extends Screen {
                 Text.translatable("vfpchatfilterpatch.button.reload"), button -> performFontReload()
         ).dimensions(this.width / 2 - 100, this.height / 2 - 25, 200, 20).build();
 
-        fieldReplaceText = new TextFieldWidget(textRenderer, this.width / 2, this.height / 2 + 5, 100, 20, Text.of(QuickConfig.REPLACE_DATA));
+        fieldReplaceText = new TextFieldWidget(textRenderer, this.width / 2, this.height / 2 + 5, 100, 20, Text.empty());
+        fieldReplaceText.setText(QuickConfig.REPLACE_DATA);
 
         ButtonWidget buttonExit = ButtonWidget.builder(
                 Text.translatable("vfpchatfilterpatch.button.exit"), button -> performExit()

@@ -40,8 +40,8 @@ public class QuickConfig {
         try (FileInputStream fileInputStream = new FileInputStream(CONFIG_FILE)) {
             final Properties properties = new Properties();
             properties.load(fileInputStream);
-            PATCH_MODE = Byte.parseByte(properties.getProperty("config.mode"));
-            REPLACE_DATA = properties.getProperty("config.replace");
+            PATCH_MODE = Byte.parseByte(properties.getProperty("config.mode", "0"));
+            REPLACE_DATA = properties.getProperty("config.replace", "");
         } catch (IOException e) {
             VFPChatFilterPatch.LOGGER.error("Oops! Couldn't read config file...", e);
             throw new RuntimeException(e);
