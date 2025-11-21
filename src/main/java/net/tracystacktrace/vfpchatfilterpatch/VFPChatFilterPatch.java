@@ -44,20 +44,20 @@ public class VFPChatFilterPatch implements ClientModInitializer {
             this.writeToFile(fontPath, fallbackFontTxt);
         }
 
-        readFontFile(fontPath);
-    }
-
-    public static void readFontFile(final @NotNull Path file) {
         try {
-            final List<String> allLines = Files.readAllLines(file, StandardCharsets.UTF_8);
-            allLines.add(" ");
-            allLines.removeIf(s -> s.isEmpty() || s.startsWith("#"));
-            ALLOWED_CHARS = allLines.stream().collect(Collectors.joining()).toCharArray();
-            LOGGER.info("Loaded custom font.txt, reading {} characters in total!", ALLOWED_CHARS.length);
+            readFontFile(fontPath);
         } catch (IOException e) {
             LOGGER.error("Oops! Couldn't read font.txt file!", e);
             throw new RuntimeException(e);
         }
+    }
+
+    public static void readFontFile(final @NotNull Path file) throws IOException {
+        final List<String> allLines = Files.readAllLines(file, StandardCharsets.UTF_8);
+        allLines.removeIf(s -> s.isEmpty() || s.startsWith("#"));
+        allLines.add(" "); //logically, font.txt will not give the space char
+        ALLOWED_CHARS = allLines.stream().collect(Collectors.joining()).toCharArray();
+        LOGGER.info("Loaded custom font.txt, reading {} characters in total!", ALLOWED_CHARS.length);
     }
 
     private @NotNull String readInsideFile(final @NotNull String file) {

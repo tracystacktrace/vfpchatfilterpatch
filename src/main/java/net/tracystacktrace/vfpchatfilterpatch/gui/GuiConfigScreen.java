@@ -13,6 +13,9 @@ import net.tracystacktrace.vfpchatfilterpatch.VFPChatFilterPatch;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
+import java.io.IOException;
+import java.nio.file.Path;
+
 public class GuiConfigScreen extends Screen {
 
     private final Screen parentScreen;
@@ -72,10 +75,30 @@ public class GuiConfigScreen extends Screen {
     }
 
     private void performFontReload() {
-        VFPChatFilterPatch.readFontFile(FabricLoader.getInstance().getConfigDir().resolve("vfpchatfilterpatch/font.txt"));
-        this.client.getToastManager().add(SystemToast.create(
-                this.client, SystemToast.Type.NARRATOR_TOGGLE, Text.of("VFP ChatFilter Patch"), Text.translatable("vfpchatfilterpatch.notify.txt.success")
-        ));
+        try {
+            final Path target = FabricLoader.getInstance().getConfigDir().resolve("vfpchatfilterpatch/font.txt");
+
+            //message the user if font.txt not found
+            if(!target.toFile().exists()) {
+                this.client.getToastManager().add(SystemToast.create(
+                        this.client, SystemToast.Type.NARRATOR_TOGGLE, Text.of("VFP ChatFilter Patch"), Text.translatable("vfpchatfilterpatch.notify.txt.notfound")
+                ));
+                return;
+            }
+
+            //try to read the font.txt file
+            VFPChatFilterPatch.readFontFile(target);
+            this.client.getToastManager().add(SystemToast.create(
+                    this.client, SystemToast.Type.NARRATOR_TOGGLE, Text.of("VFP ChatFilter Patch"), Text.translatable("vfpchatfilterpatch.notify.txt.success")
+            ));
+        } catch (IOException e) {
+            //print error and notify player about it
+            VFPChatFilterPatch.LOGGER.error("Failed to force load font.txt file!", e);
+            e.printStackTrace();
+            this.client.getToastManager().add(SystemToast.create(
+                    this.client, SystemToast.Type.NARRATOR_TOGGLE, Text.of("VFP ChatFilter Patch"), Text.translatable("vfpchatfilterpatch.notify.txt.fail")
+            ));
+        }
     }
 
     private void performExit() {

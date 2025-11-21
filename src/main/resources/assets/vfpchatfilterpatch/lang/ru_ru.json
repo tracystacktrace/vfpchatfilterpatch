@@ -6,5 +6,6 @@
   "vfpchatfilterpatch.button.reload": "Форсировать загрузку font.txt",
   "vfpchatfilterpatch.button.exit": "Сохранить и выйти",
   "vfpchatfilterpatch.notify.txt.success": "Файл font.txt был успешно загружен!",
-  "vfpchatfilterpatch.notify.txt.fail": "Файл font.txt не был загружен, проверьте логи!"
+  "vfpchatfilterpatch.notify.txt.fail": "Файл font.txt не был загружен, проверьте логи!",
+  "vfpchatfilterpatch.notify.txt.notfound": "Файл font.txt не был найден!"
 }

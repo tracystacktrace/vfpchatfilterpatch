@@ -6,5 +6,6 @@
   "vfpchatfilterpatch.button.reload": "Reload font.txt from folder",
   "vfpchatfilterpatch.button.exit": "Save and Exit",
   "vfpchatfilterpatch.notify.txt.success": "Reloaded font.txt file!",
-  "vfpchatfilterpatch.notify.txt.fail": "Failed to reload font.txt, check logs!"
+  "vfpchatfilterpatch.notify.txt.fail": "Failed to reload font.txt, check logs!",
+  "vfpchatfilterpatch.notify.txt.notfound": "The file font.txt was not found!"
 }
