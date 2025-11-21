@@ -6,7 +6,7 @@ This is practically useful when joining to servers with custom defined `font.txt
 
 ![Example screenshot.](https://github.com/tracystacktrace/vfpchatfilterpatch/raw/main/docs/example_1.png)
 
-However, when joining to the unsupported server (i.e. using vanilla `font.txt`), by writing other characters the player will be kicked out with the message "Illegal characters in chat" or similar. So don't try to use it everywhere, firstly make sure the server has allowed these characters.
+However, when joining to the unsupported server (i.e. using vanilla `font.txt`), by writing other characters the player will be kicked out with the message "Illegal characters in chat" or similar. So don't try to use it everywhere, and make sure the server has allowed these characters.
 
 As ViaFabricPlus, this is an only client-side mod.
 
@@ -24,7 +24,7 @@ Within the configuration screen, there are several buttons to allow you to chang
 
 There are currently two modes available - allowing only characters from the config font.txt (located `config/vfpchatfilterpatch/font.txt`) or allowing any characters.
 
-### Force Reload `font.txt`
+### Force Reload `font.txt` (Second Button)
 
 This button simply force reloads the font.txt, if the changes were made in the file and for some reason a reload is required without restarting the whole game.
 
