@@ -3,7 +3,7 @@
   "id": "vfpchatfilterpatch",
   "version": "${version}",
   "name": "VFP ChatFilter Patch",
-  "description": "A patch for the client-side chat filter of ViaLegacy library (ViaFabricPlus), allowing to manipulate and change its behaviour.",
+  "description": "A patch for the client-side chat filter of ViaLegacy library (ViaFabricPlus), allowing to change its behaviour.",
   "authors": ["tracystacktrace"],
   "contact": {
     "issues": "https://github.com/tracystacktrace/vfpchatfilterpatch/issues",
